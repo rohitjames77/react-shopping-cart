@@ -9,7 +9,7 @@ import {
   DropDownBeauty,
 } from "./DropDownMenu";
 
-export default function Header({ isActive, setIsActive }) {
+export default function Header({ isActive, setIsActive,quantity,setQuantity}) {
   const handleMenMouseEnter = () => {
     setIsActive({ ...isActive, men: true });
   };
@@ -118,19 +118,20 @@ export default function Header({ isActive, setIsActive }) {
 
       <div
         id="bag-profile-container"
-        className="absolute left-[93%] flex text-[1.2em] w-[10%] font-poppins font-bold mt-8 text-stone-600  "
+        className="absolute left-[93%] flex flex-rows text-[1.2em] w-[10%] font-poppins font-bold mt-8 text-stone-600  "
       >
-        <div id="profile-container" className="flex flex-col w-[30%] ">
+        <div id="profile-container" className="flex flex-col gap-1 flex-wrap w-[30%] ">
           <FaRegUser className="h-[40%] w-[40%] ml-4 " />
-          <span className="text-lg font-poppins font-bold justify-center ">
+          <span className="text-sm font-poppins font-bold ">
             Profile
           </span>
         </div>
-        <div id="bag-container" className="flex flex-col w-[50%] ">
-          <RiShoppingBag4Line className=" h-[40%] w-[40%] ml-2 " />
-          <span className=" relative left-[15%] text-lg font-poppins font-bold justify-center ">
+        <div id="bag-container" className="grid grid-cols-5 grid-rows-2 w-[50%] ">
+          <RiShoppingBag4Line className=" h-[80%] w-[80%] ml-2 row-start-1 col-start-1 col-end-3 " />
+          <span className=" text-sm font-poppins font-bold ml-3 self-start row-start-2 col-start-1 ">
             Bag
           </span>
+          <div id="cart-items-quantity" className="bg-red-400 rounded-[100%] w-[100%] h-[80%] row-start-1 col-start-3"><span id="quantity">{quantity}</span></div>
         </div>
       </div>
     </nav>
