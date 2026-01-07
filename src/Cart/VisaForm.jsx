@@ -3,7 +3,7 @@ import { useState } from "react";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 
-function VisaForm() {
+function VisaForm({isVisaSelected}) {
   const [isOpen, setIsOpen] = useState(false);
   const handleOnclick = () => {
     setIsOpen(true);
@@ -12,7 +12,7 @@ function VisaForm() {
   return (
     <div
       id="card-payment-visa-form-container"
-      className=" shadow-xl row-start-6 row-end-15 col-start-1 col-end-11 grid grid-rows-15 grid-cols-15 p-2 "
+      className={`shadow-xl row-start-6 row-end-15 col-start-1 col-end-11 grid grid-rows-15 grid-cols-15 p-2 ${isVisaSelected?"block":"hidden"}`}
     >
       <input
         type="text"
