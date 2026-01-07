@@ -1,14 +1,12 @@
 import React from "react";
-import { useState } from "react";
-
-function PaypalForm({ setLogInSuccess }) {
+function PaypalForm({ setLogInSuccess, isPaypalSelected }) {
   const handleBtnOnClick = () => {
     setLogInSuccess(true);
   };
   return (
     <div
       id="card-payment-paypal-form-container"
-      className=" shadow-xl row-start-6 row-end-15 col-start-1 col-end-11 grid grid-rows-15 grid-cols-15 p-2 "
+      className={` shadow-xl row-start-6 row-end-15 col-start-1 col-end-11 grid grid-rows-15 grid-cols-15 p-2 ${isPaypalSelected?"block":"hidden"}`}
     >
       <label
         htmlFor="user-email-id"
@@ -28,7 +26,7 @@ function PaypalForm({ setLogInSuccess }) {
         id="email-id"
         className="row-start-5 col-start-1 ml-6"
       >
-        Password{" "}
+        Password
       </label>
       <span
         id="forgot-password-title"
