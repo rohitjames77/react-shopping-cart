@@ -10,10 +10,11 @@ function App() {
     home: false,
     beauty: false,
   });
+   const [quantity, setQuantity] = useState(0);
   return (
     <div className="overflow-x-hidden h-screen w-screen">
-      <Header isActive={isActive} setIsActive={setIsActive} />
-      <ContentPage isActive={isActive} />
+      <Header isActive={isActive} setIsActive={setIsActive} quantity ={quantity} setQuantity={setQuantity} />
+      <ContentPage isActive={isActive} quantity={quantity} setQuantity= {setQuantity}/>
     </div>
   );
 }
