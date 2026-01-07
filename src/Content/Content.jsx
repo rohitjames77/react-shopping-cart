@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Products from "../products/Products";
 
-function ContentPage({ isActive }) {
+function ContentPage({ isActive,quantity,setQuantity }) {
   console.log(isActive);
   const [storeApiData, setStoreApiData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -44,7 +44,7 @@ function ContentPage({ isActive }) {
     <div
       id="content-page"
       className={` ml-10 w-[90%] h-[200%] overflow-y-auto ${isActive.men || isActive.women || isActive.home || isActive.beauty === true ? "bg-gray-400/25" : "bg-gray-50"}`}>
-      <Products storeApiData={storeApiData} setStoreApiData={setStoreApiData} />
+      <Products storeApiData={storeApiData} setStoreApiData={setStoreApiData} quantity={quantity} setQuantity={setQuantity} />
     </div>
   );
 }
