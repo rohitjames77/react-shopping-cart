@@ -2,6 +2,10 @@ import React from "react";
 function PaypalForm({ setLogInSuccess, isPaypalSelected }) {
   const handleBtnOnClick = () => {
     setLogInSuccess(true);
+setTimeout(()=>{
+setLogInSuccess(false)
+},3000)
+
   };
   return (
     <div
@@ -30,7 +34,7 @@ function PaypalForm({ setLogInSuccess, isPaypalSelected }) {
       </label>
       <span
         id="forgot-password-title"
-        className="row-start-5 col-start-12 col-end-15 ml-12 hover:underline"
+        className="row-start-5 col-start-12 col-end-16 ml-12 hover:underline"
       >
         Forgot Password?
       </span>

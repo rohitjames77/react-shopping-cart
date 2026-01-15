@@ -1,5 +1,5 @@
 import React from "react";
-//
+import { Link } from "react-router";
 export function DropDownMenuMen({ isActive }) {
   return (
     <div
@@ -544,7 +544,7 @@ export function DropDownHome({ isActive }) {
       <div className="bg-stone-100 flex-1">
         <ul
           id="bed-linen-heading"
-          className="flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl"
+          className="flex flex-col flex-1 gap-2 font-poppins font-bold text-orange-500 text-xl"
         >
           Bed Linen & Furnishing
           <li
@@ -613,7 +613,7 @@ export function DropDownHome({ isActive }) {
       <div className="flex-1 bg-neutral-50">
         <ul
           id="flooring-heading"
-          className="flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl hover:cursor-pointer"
+          className="flex flex-col flex-1 gap-2 font-poppins font-bold text-orange-500 text-xl hover:cursor-pointer"
         >
           Flooring
           <li
@@ -646,7 +646,7 @@ export function DropDownHome({ isActive }) {
       <div className="bg-stone-100 flex-1">
         <ul
           id="lamps-heading"
-          className="flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl"
+          className="flex flex-col flex-1 gap-2 font-poppins font-bold text-orange-500 text-xl"
         >
           Lamps & Lighting
           <li
@@ -691,7 +691,7 @@ export function DropDownHome({ isActive }) {
       <div className="flex-1 bg-neutral-50">
         <ul
           id="kitchen-table-heading"
-          className="flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl hover:cursor-pointer "
+          className="flex flex-col flex-1 gap-2 font-poppins font-bold text-orange-500 text-xl hover:cursor-pointer "
         >
           Kitchen & Table
           <li
@@ -742,7 +742,7 @@ export function DropDownHome({ isActive }) {
       <div className="flex-1 bg-stone-100">
         <ul
           id="storage-heading"
-          className="flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl hover:cursor-pointer"
+          className="flex flex-col flex-1 gap-2 font-poppins font-bold text-orange-500 text-xl hover:cursor-pointer"
         >
           Storage
           <li
@@ -785,7 +785,7 @@ export function DropDownBeauty({ isActive }) {
   return (
     <div
       id="beautyDropDownContainer"
-      className={`relative flex flex-cols mt-[17%] mr-[30%] h-[30vh] w-[60vw] ${isActive.beauty === true ? "block" : "hidden"}`}
+      className={` flex flex-cols mt-[17%] mr-[30%] h-[30vh] w-[60vw] ${isActive.beauty === true ? "block" : "hidden"}`}
     >
       <div className="bg-stone-100 flex-1">
         <ul

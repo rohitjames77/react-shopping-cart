@@ -2,12 +2,18 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Products from "../products/Products";
 import CartCheckoutDelivery from "../Cart/CartCheckoutDelivery";
+import Carousel from "./Carousel";
+import { Outlet } from "react-router";
+import { useOutletContext } from "react-router";
+function ContentPage() {
+  const { isActive, quantity, setQuantity } = useOutletContext();
 
-function ContentPage({ isActive,quantity,setQuantity }) {
   console.log(isActive);
   const [storeApiData, setStoreApiData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedProductArr, setSelectedProductArr] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -16,6 +22,8 @@ function ContentPage({ isActive,quantity,setQuantity }) {
         const response = await fetch("https://fakestoreapi.com/products");
         const result = await response.json();
         setStoreApiData(result);
+        console.log(storeApiData);
+        
       } catch (err) {
         setError(err.message);
       } finally {
@@ -44,10 +52,18 @@ function ContentPage({ isActive,quantity,setQuantity }) {
   return (
     <div
       id="content-page"
-      className={` ml-10 w-[90%] h-[200%] overflow-y-auto ${isActive.men || isActive.women || isActive.home || isActive.beauty === true ? "bg-gray-400/25" : "bg-gray-50"}`}>
-        <CartCheckoutDelivery/>
-
-      {/* <Products storeApiData={storeApiData} setStoreApiData={setStoreApiData} quantity={quantity} setQuantity={setQuantity} /> */}
+      className={` ml-10 w-[90%] h-[200%] overflow-y-auto ${isActive.men || isActive.women || isActive.home || isActive.beauty === true ? "bg-gray-400/25" : "bg-gray-50"}`}
+    >
+      <Outlet
+        context={{
+          storeApiData,
+          setStoreApiData,
+          quantity,
+          setQuantity,
+          setSelectedProductArr,
+          selectedProductArr,
+        }}
+      />
     </div>
   );
 }

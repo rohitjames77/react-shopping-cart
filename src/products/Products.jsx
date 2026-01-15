@@ -1,15 +1,17 @@
 import React from "react";
 import { IoBagCheckOutline } from "react-icons/io5";
 import CartInventories from "../Cart/CartInventories";
-import { useState } from "react";
 import QuantitySelector from "./QuantitySelector";
+import { useOutletContext } from "react-router";
+export default function Products() {
 
-export default function Products({
-  storeApiData,
-  setStoreApiData,
-  quantity,
-  setQuantity,
-}) {
+const {
+    storeApiData,
+    setStoreApiData,
+    quantity,
+    setQuantity,
+    setSelectedProductArr,
+  } = useOutletContext();
   return (
     <div
       id="products-container"
@@ -22,6 +24,7 @@ export default function Products({
         setStoreApiData={setStoreApiData}
         quantity={quantity}
         setQuantity={setQuantity}
+        setSelectedProductArr={setSelectedProductArr}
       />
     </div>
   );
@@ -34,8 +37,8 @@ export function ProductPageHeader() {
       className="  bg-white h-[100%] w-full row-start-1 col-start-1 col-end-6 border-b-2 border-stone-200"
     >
       <div id="route-info-container"></div>
-      <span id="category-heading">Men</span>
-      <span id="side-bar-heading">Filters</span>
+      <span id="category-heading"></span>
+      <span id="side-bar-heading"></span>
       <div id="product-description-container"></div>
     </div>
   );
@@ -74,6 +77,7 @@ export function ProductPage({
   setProduct,
   quantity,
   setQuantity,
+  setSelectedProductArr,
 }) {
   return (
     <div
@@ -89,30 +93,35 @@ export function ProductPage({
           productNo={0}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
         <ProductCards
           storeApiData={storeApiData}
           productNo={1}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
         <ProductCards
           storeApiData={storeApiData}
           productNo={2}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
         <ProductCards
           storeApiData={storeApiData}
           productNo={3}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
         <ProductCards
           storeApiData={storeApiData}
           productNo={4}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
       </div>
       <div
@@ -124,30 +133,35 @@ export function ProductPage({
           productNo={5}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
         <ProductCards
           storeApiData={storeApiData}
           productNo={6}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
         <ProductCards
           storeApiData={storeApiData}
           productNo={7}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
         <ProductCards
           storeApiData={storeApiData}
           productNo={8}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
         <ProductCards
           storeApiData={storeApiData}
           productNo={9}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
       </div>
       <div
@@ -159,30 +173,35 @@ export function ProductPage({
           productNo={10}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
         <ProductCards
           storeApiData={storeApiData}
           productNo={11}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
         <ProductCards
           storeApiData={storeApiData}
           productNo={12}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
         <ProductCards
           storeApiData={storeApiData}
           productNo={13}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
         <ProductCards
           storeApiData={storeApiData}
           productNo={14}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
       </div>
       <div
@@ -196,6 +215,7 @@ export function ProductPage({
           productNo={15}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
         <ProductCards
           product={product}
@@ -204,6 +224,7 @@ export function ProductPage({
           productNo={16}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
         <ProductCards
           product={product}
@@ -212,6 +233,7 @@ export function ProductPage({
           productNo={17}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
         <ProductCards
           product={product}
@@ -220,6 +242,7 @@ export function ProductPage({
           productNo={18}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
         <ProductCards
           product={product}
@@ -228,29 +251,38 @@ export function ProductPage({
           productNo={19}
           quantity={quantity}
           setQuantity={setQuantity}
+          setSelectedProductArr={setSelectedProductArr}
         />
       </div>
     </div>
   );
 }
 
-function ProductCards({ storeApiData, productNo, quantity, setQuantity }) {
-  const [selectedProduct, setSelectedProduct] = useState({});
-  
+function ProductCards({
+  storeApiData,
+  productNo,
+  quantity,
+  setQuantity,
+  setSelectedProductArr,
+}) {
 
+  console.log(storeApiData);
+  
   const product = {
     id: storeApiData[productNo]?.id,
     image: storeApiData[productNo]?.image,
     title: storeApiData[productNo]?.title,
     price: storeApiData[productNo]?.price,
     rating: storeApiData[productNo]?.rating.rate,
+    quantity: 1,
   };
 
   const handleOnclick = () => {
-    setSelectedProduct(product);
-    setQuantity(quantity+1);
-  //  setIndividualQuantity((individualProductQuantity) => (individualProductQuantity += 1));
+    console.log(product);
+    setSelectedProductArr((prev) => [...prev, product]);
+    setQuantity(quantity + 1);
   };
+
   return (
     <div
       id={`product-card-${product.id}`}
@@ -285,12 +317,12 @@ function ProductCards({ storeApiData, productNo, quantity, setQuantity }) {
       </div>
       <div className="bg-stone-200 w-full h-[12%] flex flex-row rounded-2xl gap-2 hover:bg-stone-400 shadow-[0_5px_0_#999] active:translate-y-[4px]">
         <IoBagCheckOutline className="h-[1.2rem] w-[1.2rem] mt-2 ml-2" />
-       <button
-            className="justify-center text-lg-bold mr-4"
-            onClick={handleOnclick}
-          >
-            ADD TO BAG
-          </button>
+        <button
+          className="justify-center text-lg-bold mr-4"
+          onClick={handleOnclick}
+        >
+          ADD TO BAG
+        </button>
       </div>
     </div>
   );
