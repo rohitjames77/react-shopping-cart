@@ -1,8 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Products from "../products/Products";
-import CartCheckoutDelivery from "../Cart/CartCheckoutDelivery";
-import Carousel from "./Carousel";
 import { Outlet } from "react-router";
 import { useOutletContext } from "react-router";
 function ContentPage() {
