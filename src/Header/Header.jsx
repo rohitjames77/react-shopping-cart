@@ -1,6 +1,5 @@
 import React from "react";
-import logo from "../assets/logo.svg";
-import { FaRegUser } from "react-icons/fa";
+import logo from "../assets/hypecart-logo2.svg";
 import { RiShoppingBag4Line } from "react-icons/ri";
 import { Link } from "react-router";
 import {
@@ -25,12 +24,6 @@ export default function Header({ isActive, setIsActive,quantity}) {
     setIsActive({ ...isActive, women: false });
   };
 
-  const handleHomeMouseEnter = () => {
-    setIsActive({ ...isActive, home: true,women:false,men:false,beauty:false });
-  };
-  const handleHomeMouseLeave = () => {
-    setIsActive({ ...isActive, home: false });
-  };
   const handleBeautyMouseEnter = () => {
     setIsActive({ ...isActive, beauty: true,women:false,home:false,men:false });
   };
@@ -53,8 +46,8 @@ export default function Header({ isActive, setIsActive,quantity}) {
       />
       </Link>
       <div
-        id="categories-link-container z-20"
-        className=" relative mt-10 font-poppins font-bold flex flex-row gap-8 w-[40%] h-[50%] text-[1.1em] text-stone-400 ml-8 "
+        id="categories-link-container"
+        className=" relative mt-10 font-poppins font-bold flex flex-row gap-4 w-[40%] h-[50%] text-[1.1em] text-stone-400 ml-8 "
       >
         <div
           onMouseEnter={handleMenMouseEnter}
@@ -87,21 +80,6 @@ export default function Header({ isActive, setIsActive,quantity}) {
         </div>
 
         <div
-          onMouseEnter={handleHomeMouseEnter}
-          onMouseLeave={handleHomeMouseLeave}
-          id="home-category-container"
-          className="h-[5vh] w-[5vw] "
-        >
-          <h2
-            id="home-category"
-            className="hover:border-b-4 border-orange-500 w-fit hover:cursor-pointer"
-          >
-            HOME
-          </h2>
-          <DropDownHome isActive={isActive} />
-        </div>
-
-        <div
           onMouseEnter={handleBeautyMouseEnter}
           onMouseLeave={handleBeautyMouseLeave}
           id="beauty-category-container"
@@ -120,8 +98,8 @@ export default function Header({ isActive, setIsActive,quantity}) {
       >
 <Link className=" flex-2 hover:text-gray-300 " to="/content/home" >Home</Link>
  <Link className="  flex-2 hover:text-gray-300" to="/content/products">Product</Link>
-        <Link className=" flex flex-2 hover:text-gray-300" to="/content/cart" >Shopping Bag<RiShoppingBag4Line className="h-[30px]" />
- <span className={` h-[60%] flex-1 mr-4 ${quantity> 0 ? 'block' :'hidden'}`}><span id="cart-items-quantity" className="bg-red-400 rounded-[100%] w-[100%] h-[100% ] text-white">{quantity}</span> 
+        <Link className=" flex flex-2 hover:text-gray-300" to="/content/cart" >Shopping Bag<RiShoppingBag4Line className="h-[40px]" />
+ <span className={` h-[60%] flex-1 mr-4 ${quantity> 0 ? 'block' :'hidden'}`}><span id="cart-items-quantity" className="bg-red-400 rounded-[100%] h-[100%] text-white w-[40px]">{quantity}</span> 
         
       </span>
 
