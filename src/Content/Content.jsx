@@ -51,6 +51,7 @@ function ContentPage() {
       id="content-page"
       className={` ml-10 w-[90%] h-[200%] overflow-y-auto ${isActive.men || isActive.women || isActive.home || isActive.beauty === true ? "bg-gray-400/25" : "bg-gray-50"}`}
     >
+      
       <Outlet
         context={{
           storeApiData,
