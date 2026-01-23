@@ -5,84 +5,80 @@ import { FaChevronRight } from "react-icons/fa";
 import { useOutletContext } from 'react-router';
 
 
-function Carousel (){
-  return(
-  <div className='max-w-[90vw] max-h-[100vh]'>
-<CarouselCard/>
-<CarouselCard/>
-<CarouselCard/>
-<CarouselCard/>
-</div>
-  )
-}
+function Carousel() {
+  const [current, setCurrent] = useState(0);
+  const { storeApiData } = useOutletContext();
 
-
-
-
- function CarouselCard() {
-const [current, setCurrent] = useState(0);
-const {storeApiData} = useOutletContext();
   const prev = () => {
-    setCurrent(current === 0 ? storeApiData.length - 1 : current - 1);
+    setCurrent((prev) =>
+      prev === 0 ? storeApiData.length - 1 : prev - 1
+    );
   };
 
   const next = () => {
-    setCurrent(current === storeApiData.length - 1 ? 0 : current + 1);
+    setCurrent((prev) =>
+      prev === storeApiData.length - 1 ? 0 : prev + 1
+    );
   };
 
-   useEffect(() => {
-    const interval = setInterval(() => {
-      next();
-    }, 2000);
-
+  useEffect(() => {
+    const interval = setInterval(next, 3500);
     return () => clearInterval(interval);
   }, [current]);
 
   return (
-    <div className="relative max-w-[90vw] mx-auto bg-gray-800">
-      <div className="relative h-96 mt-10 rounded-lg overflow-hidden">
+    <div className="m-8 relative w-full overflow-hidden rounded-xl shadow-lg">
+      <div className="relative h-[65vh]">
         {storeApiData.map((item, index) => (
           <img
             key={item.id}
             src={item.image}
-            alt={item.title || `Slide ${index + 1}`}
-            className={`absolute w-full h-full object-fit transition-opacity duration-500 ${
-              index === current ? 'opacity-100' : 'opacity-0'
-            }`}
+            alt={item.title}
+            className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out
+              ${index === current
+                ? 'opacity-100 scale-100'
+                : 'opacity-0 scale-105'
+              }`}
           />
         ))}
 
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+
         <button
           onClick={prev}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full"
+          className="absolute left-6 top-1/2 -translate-y-1/2 
+          bg-white/30 backdrop-blur-md hover:bg-white/50 
+          p-3 rounded-full shadow-md transition"
         >
-          <FaChevronLeft className="w-6 h-6" />
+          <FaChevronLeft className="text-white w-5 h-5" />
         </button>
 
         <button
           onClick={next}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full"
+          className="absolute right-6 top-1/2 -translate-y-1/2 
+          bg-white/30 backdrop-blur-md hover:bg-white/50 
+          p-3 rounded-full shadow-md transition"
         >
-          <FaChevronRight className="w-6 h-6" />
+          <FaChevronRight className="text-white w-5 h-5" />
         </button>
-      </div>
 
-      <div className="flex justify-center gap-2 mt-4">
-        {storeApiData.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              index === current ? 'bg-white w-8' : 'bg-white/50'
-            }`}
-          />
-        ))}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+          {storeApiData.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrent(index)}
+              className={`h-2 rounded-full transition-all duration-300
+                ${index === current
+                  ? 'w-8 bg-white'
+                  : 'w-2 bg-white/50'
+                }`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
 }
-
-
 
 
 export default Carousel;
