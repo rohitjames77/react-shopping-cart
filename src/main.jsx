@@ -9,11 +9,13 @@ import App from "./App.jsx";
 import Products from "./products/Products.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import CartCheckoutDelivery from "./Cart/CartCheckoutDelivery.jsx";
+import ErrorPage from "./Content/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement:<ErrorPage/>,
     children: [
       {
         path: "content",
