@@ -1,0 +1,42 @@
+<svg
+  width="220"
+  height="60"
+  viewBox="0 0 220 60"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- stone-50 background -->
+  <rect width="100%" height="100%" fill="#fafaf9" />
+
+  <g transform="translate(0, 8)">
+    <rect x="0" y="10" width="36" height="22" rx="4" fill="#111827"/>
+    <circle cx="10" cy="38" r="4" fill="#111827"/>
+    <circle cx="28" cy="38" r="4" fill="#111827"/>
+
+    <path
+      d="M18 12 L12 24 H18 L14 36 L26 20 H18 Z"
+      fill="#FACC15"
+    />
+  </g>
+
+  <text
+    x="50"
+    y="38"
+    font-size="28"
+    font-weight="700"
+    font-family="Poppins, Inter, sans-serif"
+    fill="#111827"
+  >
+    Hype
+  </text>
+
+  <text
+    x="120"
+    y="38"
+    font-size="28"
+    font-weight="700"
+    font-family="Poppins, Inter, sans-serif"
+    fill="#FACC15"
+  >
+    Cart
+  </text>
+</svg>
