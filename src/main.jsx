@@ -7,11 +7,17 @@ import ContentPage from "./Content/Content.jsx";
 import Carousel from "./Content/Carousel.jsx";
 import App from "./App.jsx";
 import Products from "./products/Products.jsx";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, RouterProvider,Navigate } from "react-router";
 import CartCheckoutDelivery from "./Cart/CartCheckoutDelivery.jsx";
-import ErrorPage from "./Content/ErrorPage.jsx";
+import ErrorPage from './Content/ErrorPage.jsx'
 
 const router = createBrowserRouter([
+ {
+    path: "/",
+    element: <Navigate to="/content/home" replace />,
+  },
+ 
+ 
   {
     path: "/",
     element: <App />,
@@ -30,7 +36,7 @@ const router = createBrowserRouter([
             element: <CartCheckoutDelivery />,
           },
           {
-            path: "home",
+            path: "/content/home",
             element: <Carousel />,
           },
         ],
