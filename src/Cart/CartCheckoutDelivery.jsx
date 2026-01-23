@@ -13,13 +13,16 @@ import Payment from "./Payment";
 import Coupon from "./Coupon";
 import OrderSummary from "../products/OrderSummary";
 import { useOutletContext } from "react-router";
+import PaymentSuccessNotification from "./PaymentSuccessNotification";
 export default function CartCheckoutDelivery() {
 const [logInSuccess,setLogInSuccess] = useState(false);
 const[isVisaSelected,setIsVisaSelected]= useState(true);
 const [isPaypalSelected,setIsPaypalSelected] = useState(false);
 const[couponNotification,setCouponNotification]= useState(false);
 const [isPaymentProceeded,setPaymentProceeded] = useState(false);
+const [isPaymentSuccess,setPaymentSuccess]= useState(false);
 const {selectedProductArr,quantity,setQuantity,setSelectedProductArr} = useOutletContext();
+const [displayTotal,setTotal] =useState('')
  return (
      <div
       id="Cart-container"
@@ -40,12 +43,12 @@ const {selectedProductArr,quantity,setQuantity,setSelectedProductArr} = useOutle
         </div>:<div className=" hidden  bg-green-100 text-green-700 pl-6 rounded border border-green-300 col-start-5 col-end-7 w-[75%] h-[30%] m-2">
           ✅ Coupon submitted successfully
         </div>}
-        {isPaymentProceeded? <Payment isPaypalSelected={isPaypalSelected} isVisaSelected={isVisaSelected} setLogInSuccess={setLogInSuccess} setIsPaypalSelected={setIsPaypalSelected} setIsVisaSelected={setIsVisaSelected} />:<CartInventories selectedProductArr={selectedProductArr} setSelectedProductArr={setSelectedProductArr} quantity={quantity} setQuantity={setQuantity} />}
-
+        {isPaymentProceeded? <Payment isPaypalSelected={isPaypalSelected} isVisaSelected={isVisaSelected} setLogInSuccess={setLogInSuccess} setPaymentSuccess={setPaymentSuccess} setIsPaypalSelected={setIsPaypalSelected} setIsVisaSelected={setIsVisaSelected} />:<CartInventories selectedProductArr={selectedProductArr}  setPaymentSuccess={setPaymentSuccess} setSelectedProductArr={setSelectedProductArr} quantity={quantity} setQuantity={setQuantity} />}
+    <PaymentSuccessNotification isPaymentSuccess={isPaymentSuccess} displayTotal={displayTotal}/>
 
 <Coupon setCouponNotification={setCouponNotification}   />
 
-<OrderSummary selectedProductArr={selectedProductArr} setPaymentProceeded={setPaymentProceeded} />
+<OrderSummary selectedProductArr={selectedProductArr} setPaymentProceeded={setPaymentProceeded} setTotal={setTotal}/>
 
       </div>
     </div>
