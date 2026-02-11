@@ -1,6 +1,6 @@
 # React Shopping Cart
 
-A mock e-commerce application built with React that demonstrates routing, state management, and API integration. This project helped me understand how to build a multi-page application with a functional shopping cart system.
+A mock e-commerce application built with React that demonstrates routing, state management, and API integration. This project is about building a multi-page application with a functional shopping cart system.
 
 ## 🎥 Live Demo
 
