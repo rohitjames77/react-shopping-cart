@@ -73,7 +73,8 @@ function OrderSummary({ selectedProductArr, setPaymentProceeded,setTotal }) {
             id="discount-quantity"
             className="row-start-2 col-start-3 text-green-500"
           >
-            $ 5 %
+            $ {orderTotal > 0 ? "$ 5 %" : "0"}
+            
           </span>
           <span
             id="net-subtotal-heading"
@@ -122,7 +123,7 @@ function OrderSummary({ selectedProductArr, setPaymentProceeded,setTotal }) {
         className=" flex text-center font-bold justify-center text-white bg-blue-500 rounded-xl h-[10%] w-full mt-4 text-2xl active:bg-white active:text-blue-500 active:translate-y-[4px] "
         id="proceed-payment"
       >
-        Proceed to Payments
+        Proceed to Payment
       </button>
     </div>
   );

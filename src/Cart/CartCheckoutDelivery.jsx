@@ -1,12 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import logo from "../assets/logo.svg";
-
-import visa from "../assets/visa.svg";
-import masterCard from "../assets/mastercard.svg";
-import paypal from "../assets/paypal.svg";
-import VisaForm from "./VisaForm";
-import PaypalForm from "./PaypalForm";
 import CartNavHeader from "./CartNavHeader";
 import CartInventories from "./CartInventories";
 import Payment from "./Payment";

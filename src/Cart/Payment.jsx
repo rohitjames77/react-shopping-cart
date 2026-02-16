@@ -2,8 +2,8 @@ import React from "react";
 import visa from "../assets/visa.svg";
 import masterCard from "../assets/mastercard.svg";
 import paypal from "../assets/paypal.svg";
-import VisaForm from "./VisaForm";
-import PaypalForm from "./PaypalForm";
+import VisaForm from "./visa/VisaForm";
+import PaypalForm from "./paypal/PaypalForm";
 
 function Payment({
   isVisaSelected,

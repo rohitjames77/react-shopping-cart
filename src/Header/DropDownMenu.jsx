@@ -1,17 +1,16 @@
-import React from "react";
-import { Link } from "react-router";
+
 export function DropDownMenuMen({ isActive }) {
   return (
     <div
       id="menDropDownContainer"
       className={`relative flex flex-cols mt-[17%] mr-[25%] h-[30vh] w-[60vw] ${isActive.men === true ? "block" : "hidden"} `}
     >
-      <div className="bg-stone-100  flex-1">
+      <div className="bg-stone-200  flex-1 p-2">
         <ul
           id="indianwear-heading "
           className=" flex flex-col flex-1 gap-2 font-poppins font-bold text-red-400 text-xl  "
         >
-          indianwear
+          Indianwear
           <li
             id="indianwear-t-shirt"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
@@ -34,7 +33,7 @@ export function DropDownMenuMen({ isActive }) {
             id="indianwear-sweatshirts"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Sweatshirts
+            Sweat Shirts
           </li>
           <li
             id="indianwear-sweaters"
@@ -64,16 +63,16 @@ export function DropDownMenuMen({ isActive }) {
             id="indianwear-rain-jackets"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Rain jackets
+            Rain Coats
           </li>
         </ul>
       </div>
-      <div className=" flex-1 bg-neutral-50">
+      <div className=" flex-1 bg-white p-2">
         <ul
           id="indian-festive-wear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-red-400 text-xl hover:cursor-pointer"
         >
-          Festivewears
+          Festive Wears
           <li
             id="indianwear-kurta&set"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
@@ -90,7 +89,7 @@ export function DropDownMenuMen({ isActive }) {
             id="indianwear-nehru-jackets"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Nehru jackets
+            Nehru Jackets
           </li>
           <li
             id="indianwear-dhotis"
@@ -100,12 +99,12 @@ export function DropDownMenuMen({ isActive }) {
           </li>
         </ul>
       </div>
-      <div className="bg-stone-100  flex-1">
+      <div className="bg-stone-200 flex-1 p-2">
         <ul
           id="lingerie"
-          className=" flex flex-col flex-1 gap-2 font-poppins font-bold text-red-400 text-xl bg-stone-100"
+          className=" flex flex-col flex-1 gap-2 font-poppins font-bold text-red-400 text-xl"
         >
-          lingeries
+          Lingeries
           <li
             id="lingerie-jeans"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
@@ -116,13 +115,13 @@ export function DropDownMenuMen({ isActive }) {
             id="lingerie-casual-trousers"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Casual trousers
+            Casual Trousers
           </li>
           <li
             id="lingerie-formal-trousers"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Formal trousers
+            Formal Trousers
           </li>
           <li
             id="lingerie-shorts"
@@ -134,11 +133,11 @@ export function DropDownMenuMen({ isActive }) {
             id="lingerie-trackpants-joggers"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            TrackPant joggers
+            TrackPant Joggers
           </li>
         </ul>
       </div>
-      <div className=" flex-1 bg-neutral-50">
+      <div className=" flex-1 bg-white p-2">
         <ul
           id="innerwear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-red-400 text-xl hover:cursor-pointer"
@@ -166,7 +165,7 @@ export function DropDownMenuMen({ isActive }) {
             id="innerwear-sleepwear"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Sleepwears
+            SleepWears
           </li>
           <li
             id="innerwear-thermals"
@@ -176,7 +175,7 @@ export function DropDownMenuMen({ isActive }) {
           </li>
         </ul>
       </div>
-      <div className=" flex-1 bg-stone-100">
+      <div className=" flex-1 bg-stone-200 p-2">
         <ul
           id="footwear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-red-400 text-xl hover:cursor-pointer"
@@ -186,19 +185,19 @@ export function DropDownMenuMen({ isActive }) {
             id="footwear-casual"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Casual shoes
+            Casual Shoes
           </li>
           <li
             id="footwear-sports"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Sports shoes
+            Sports Shoes
           </li>
           <li
             id="footwear-formal"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Formal shoes
+            Formal Shoes
           </li>
           <li
             id="footwear-sneakers"
@@ -227,7 +226,7 @@ export function DropDownMenuMen({ isActive }) {
         </ul>
       </div>
 
-      <div className=" flex-1 bg-neutral-50">
+      <div className=" flex-1 bg-white p-2">
         <ul
           id="sportswear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-red-400 text-xl hover:cursor-pointer"
@@ -237,7 +236,7 @@ export function DropDownMenuMen({ isActive }) {
             id="sportswears-active-tshirts"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Active T-shirts
+            Active T-Shirts
           </li>
           <li
             id="sportswears-tracks-shorts"
@@ -253,13 +252,13 @@ export function DropDownMenuMen({ isActive }) {
             id="sportswears-jackets"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            jackets Sweatshirts
+            Jackets SweatShirts
           </li>
           <li
             id="sportswears-accesories"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Sports accessories
+            Sports Accessories
           </li>
           <li
             id="sportswears-swimwear"
@@ -279,24 +278,19 @@ export function DropDownWomen({ isActive }) {
       id="womenDropDownContainer"
       className={`relative flex flex-cols mt-[17%] mr-[30%] h-[30vh] w-[60vw] ${isActive.women === true ? "block" : "hidden"}`}
     >
-      <div className="bg-stone-100  flex-1">
+      <div className="bg-stone-200 flex-1 p-2">
         <ul
           id="indianwear-heading "
           className=" flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl  "
         >
-          IndianWear & fusion
+          Indian Wear
           <li
             id="indianwear-suits"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Indianwear Suits
+           Suits
           </li>
-          <li
-            id="indianwear-tunics-tops"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Casual Shirts
-          </li>
+      
           <li
             id="indianwear-sarees"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
@@ -313,25 +307,25 @@ export function DropDownWomen({ isActive }) {
             id="indianwear-leggings-salwar"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            leggings salwars & churidars
+            Leggings Salwars & Churidars
           </li>
           <li
             id="indianwear-plazzos"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            plazzos & skirts
+            Plazzos
           </li>
           <li
             id="indianwear-dress-materials"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Dress materials
+            Dress Materials
           </li>
           <li
             id="indianwear-lehangas"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Lehanga cholis
+            Lehanga Cholis
           </li>
           <li
             id="indianwear-duppattas-shawls"
@@ -341,7 +335,7 @@ export function DropDownWomen({ isActive }) {
           </li>
         </ul>
       </div>
-      <div className=" flex-1 bg-neutral-50">
+      <div className=" flex-1 bg-white p-2">
         <ul
           id="indian-festive-wear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl hover:cursor-pointer"
@@ -373,12 +367,12 @@ export function DropDownWomen({ isActive }) {
           </li>
         </ul>
       </div>
-      <div className="bg-stone-100  flex-1">
+      <div className="bg-stone-200 flex-1 p-2">
         <ul
           id="lingerie"
-          className=" flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl bg-stone-100"
+          className=" flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl"
         >
-          lingeries
+          Lingeries
           <li
             id="lingerie-bra"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
@@ -411,17 +405,17 @@ export function DropDownWomen({ isActive }) {
           </li>
         </ul>
       </div>
-      <div className=" flex-1 bg-neutral-50">
+      <div className=" flex-1 bg-white p-2">
         <ul
           id="jewellery"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl hover:cursor-pointer"
         >
-          Jewellerys
+          Jewellery
           <li
             id="jewellery-fashion"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Fashion jewellery
+            Fashion Jewellery
           </li>
           <li
             id="jewellery-fine"
@@ -438,7 +432,7 @@ export function DropDownWomen({ isActive }) {
         </ul>
       </div>
 
-      <div className=" flex-1 bg-stone-100">
+      <div className=" flex-1 bg-stone-200 p-2">
         <ul
           id="footwear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl hover:cursor-pointer"
@@ -454,7 +448,7 @@ export function DropDownWomen({ isActive }) {
             id="footwear-sports"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Sports shoes
+            Sports Shoes
           </li>
           <li
             id="footwear-boots"
@@ -489,7 +483,7 @@ export function DropDownWomen({ isActive }) {
         </ul>
       </div>
 
-      <div className=" flex-1 bg-neutral-50">
+      <div className=" flex-1 bg-white p-2">
         <ul
           id="sportswear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl hover:cursor-pointer"
@@ -515,13 +509,13 @@ export function DropDownWomen({ isActive }) {
             id="sportswears-jackets"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            jackets Sweatshirts
+            Jackets Sweatshirts
           </li>
           <li
             id="sportswears-accesories"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Sports accessories
+            Sports Accessories
           </li>
           <li
             id="sportswears-swimwear"
@@ -534,260 +528,13 @@ export function DropDownWomen({ isActive }) {
     </div>
   );
 }
-//
-export function DropDownHome({ isActive }) {
-  return (
-    <div
-      id="homeDropDownContainer"
-      className={`relative flex flex-cols mt-[17%] mr-[30%] h-[30vh] w-[60vw] ${isActive.home === true ? "block" : "hidden"} `}
-    >
-      <div className="bg-stone-100 flex-1">
-        <ul
-          id="bed-linen-heading"
-          className="flex flex-col flex-1 gap-2 font-poppins font-bold text-orange-500 text-xl"
-        >
-          Bed Linen & Furnishing
-          <li
-            id="bed-runners"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Bed Runners
-          </li>
-          <li
-            id="mattress-protectors"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Mattress Protectors
-          </li>
-          <li
-            id="bedsheets"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Bedsheets
-          </li>
-          <li
-            id="bedding-sets"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Bedding Sets
-          </li>
-          <li
-            id="blankets-quilts"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Blankets, Quilts & Dohars
-          </li>
-          <li
-            id="pillows-covers"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Pillows & Pillow Covers
-          </li>
-          <li
-            id="bed-covers"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Bed Covers
-          </li>
-          <li
-            id="diwan-sets"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Diwan Sets
-          </li>
-          <li
-            id="chair-pads"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Chair Pads & Covers
-          </li>
-          <li
-            id="sofa-covers"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Sofa Covers
-          </li>
-        </ul>
-      </div>
-
-      <div className="flex-1 bg-neutral-50">
-        <ul
-          id="flooring-heading"
-          className="flex flex-col flex-1 gap-2 font-poppins font-bold text-orange-500 text-xl hover:cursor-pointer"
-        >
-          Flooring
-          <li
-            id="floor-runners"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Floor Runners
-          </li>
-          <li
-            id="carpets"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Carpets
-          </li>
-          <li
-            id="floor-mats"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Floor Mats & Dhurries
-          </li>
-          <li
-            id="door-mats"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Door Mats
-          </li>
-        </ul>
-      </div>
-
-      <div className="bg-stone-100 flex-1">
-        <ul
-          id="lamps-heading"
-          className="flex flex-col flex-1 gap-2 font-poppins font-bold text-orange-500 text-xl"
-        >
-          Lamps & Lighting
-          <li
-            id="floor-lamps"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Floor Lamps
-          </li>
-          <li
-            id="ceiling-lamps"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Ceiling Lamps
-          </li>
-          <li
-            id="table-lamps"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Table Lamps
-          </li>
-          <li
-            id="wall-lamps"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Wall Lamps
-          </li>
-          <li
-            id="outdoor-lamps"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Outdoor Lamps
-          </li>
-          <li
-            id="string-lights"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            String Lights
-          </li>
-        </ul>
-      </div>
-
-      <div className="flex-1 bg-neutral-50">
-        <ul
-          id="kitchen-table-heading"
-          className="flex flex-col flex-1 gap-2 font-poppins font-bold text-orange-500 text-xl hover:cursor-pointer "
-        >
-          Kitchen & Table
-          <li
-            id="table-runners"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Table Runners
-          </li>
-          <li
-            id="dinnerware-serveware"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Dinnerware & Serveware
-          </li>
-          <li
-            id="cups-mugs"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Cups and Mugs
-          </li>
-          <li
-            id="bakeware-cookware"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Bakeware & Cookware
-          </li>
-          <li
-            id="kitchen-storage"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Kitchen Storage & Tools
-          </li>
-          <li
-            id="bar-drinkware"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Bar & Drinkware
-          </li>
-          <li
-            id="table-covers"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Table Covers & Furnishings
-          </li>
-        </ul>
-      </div>
-
-      <div className="flex-1 bg-stone-100">
-        <ul
-          id="storage-heading"
-          className="flex flex-col flex-1 gap-2 font-poppins font-bold text-orange-500 text-xl hover:cursor-pointer"
-        >
-          Storage
-          <li
-            id="bins"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Bins
-          </li>
-          <li
-            id="hangers"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Hangers
-          </li>
-          <li
-            id="organisers"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Organisers
-          </li>
-          <li
-            id="hooks-holders"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Hooks & Holders
-          </li>
-          <li
-            id="laundry-bags"
-            className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
-          >
-            Laundry Bags
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
-}
-
 export function DropDownBeauty({ isActive }) {
   return (
     <div
       id="beautyDropDownContainer"
       className={` flex flex-cols mt-[17%] mr-[30%] h-[30vh] w-[60vw] ${isActive.beauty === true ? "block" : "hidden"}`}
     >
-      <div className="bg-stone-100 flex-1">
+      <div className="bg-stone-200 flex-1 p-2">
         <ul
           id="makeup-heading"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-green-500 text-xl"
@@ -844,7 +591,7 @@ export function DropDownBeauty({ isActive }) {
         </ul>
       </div>
 
-      <div className="flex-1 bg-neutral-50">
+      <div className="flex-1 bg-white p-2">
         <ul
           id="skincare-heading"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-green-500 text-xl hover:cursor-pointer"
@@ -901,7 +648,7 @@ export function DropDownBeauty({ isActive }) {
         </ul>
       </div>
 
-      <div className="bg-stone-100 flex-1">
+      <div className="bg-stone-200 flex-1 p-2">
         <ul
           id="haircare-heading"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-green-500 text-xl"
@@ -958,7 +705,7 @@ export function DropDownBeauty({ isActive }) {
         </ul>
       </div>
 
-      <div className="flex-1 bg-neutral-50">
+      <div className="flex-1 bg-white p-2">
         <ul
           id="appliances-heading"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-green-500 text-xl hover:cursor-pointer"

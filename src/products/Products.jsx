@@ -1,8 +1,6 @@
-import React from "react";
+
 import { useState } from "react";
 import { IoBagCheckOutline } from "react-icons/io5";
-import CartInventories from "../Cart/CartInventories";
-import QuantitySelector from "./QuantitySelector";
 import { useOutletContext } from "react-router";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import { MdKeyboardDoubleArrowUp } from "react-icons/md";
