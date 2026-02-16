@@ -4,7 +4,10 @@ A mock e-commerce application built with React that demonstrates routing, state 
 
 ## 🎥 Live Demo
 
-![](https://github.com/rohitjames77/react-shopping-cart/issues/2#issue-3946255195)
+
+https://github.com/user-attachments/assets/2a81cd79-180b-4cae-a59a-2fd58eb2c422
+
+
 **Live Site:** [[react-shopping-cart](https://react-shopping-cart-three-weld.vercel.app/)]
 
 ---
@@ -50,10 +53,6 @@ I built three main pages - a home page, a shop with products from the FakeStore 
   - Remove items from cart
   - Real-time total calculation
   - Persistent cart state across page navigation
-
-- **Responsive Design**
-  - Works across different screen sizes
-  - Clean, user-friendly interface
 
 ---
 
@@ -165,7 +164,6 @@ Each hosting service handles SPAs differently. Understanding why these configura
 ## Future Improvements
 
 - Add product filtering and sorting options
-- Implement search functionality
 - Add product detail pages with more information
 - Include user authentication
 - Add wishlist functionality
@@ -189,6 +187,6 @@ Each hosting service handles SPAs differently. Understanding why these configura
 **Rohit James**
 
 - GitHub: [@rohitjames77](https://github.com/rohitjames77)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- LinkedIn: [Your LinkedIn](www.linkedin.com/in/rohit-james-2b43433b0)
 
 ---
