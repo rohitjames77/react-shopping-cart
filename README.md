@@ -4,7 +4,7 @@ A mock e-commerce application built with React that demonstrates routing, state 
 
 ## 🎥 Live Demo
 
-![](https://github.com/rohitjames77/react-shopping-cart/issues/1#issue-3946237271)
+![](https://github.com/rohitjames77/react-shopping-cart/issues/2#issue-3946255195)
 **Live Site:** [[react-shopping-cart](https://react-shopping-cart-three-weld.vercel.app/)]
 
 ---
