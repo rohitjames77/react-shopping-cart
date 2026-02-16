@@ -187,6 +187,6 @@ Each hosting service handles SPAs differently. Understanding why these configura
 **Rohit James**
 
 - GitHub: [@rohitjames77](https://github.com/rohitjames77)
-- LinkedIn: [Your LinkedIn](www.linkedin.com/in/rohit-james-2b43433b0)
+- LinkedIn:(www.linkedin.com/in/rohitjames77)
 
 ---
