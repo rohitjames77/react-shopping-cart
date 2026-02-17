@@ -58,17 +58,17 @@ export default function Header({ isActive, setIsActive, quantity }) {
       </Link>
       <div
         id="categories-link-container"
-        className=" relative mt-12 font-poppins font-bold flex flex-row  w-[20%] h-[50%] text-[1.1em] text-stone-400 ml-8 "
+        className=" relative mt-10 font-poppins font-bold flex flex-row w-[20%] h-[40%] text-[1.1em] text-stone-400  "
       >
         <div
           onMouseEnter={handleMenMouseEnter}
           onMouseLeave={handleMenMouseleave}
           id="men-category-container"
-          className="relative h-[5vh] w-[5vw] flex-1"
+          className="relative h-[5vh] w-[5vw] flex-1 p-2"
         >
           <h2
             id="men-category"
-            className="hover:border-b-4 border-red-400 w-fit hover:cursor-pointer ml-4 "
+            className="hover:border-b-4 border-red-400 w-fit hover: hover:cursor-pointer hover:text-gray-600 ml-8 "
           >
             MEN
           </h2>
@@ -79,11 +79,11 @@ export default function Header({ isActive, setIsActive, quantity }) {
           onMouseEnter={handleWomenMouseEnter}
           onMouseLeave={handleWomenMouseLeave}
           id="women-category-container"
-          className="relative h-[5vh] w-[5vw] flex-1 "
+          className="relative h-[5vh] w-[5vw] flex-1 p-2 "
         >
           <h2
             id="women-category"
-            className="hover:border-b-4 hover:border-fuchsia-500 w-fit hover:cursor-pointer"
+            className="hover:border-b-4 hover:border-fuchsia-500 w-fit hover:cursor-pointer hover:text-gray-600"
           >
             WOMEN
           </h2>
@@ -94,11 +94,11 @@ export default function Header({ isActive, setIsActive, quantity }) {
           onMouseEnter={handleBeautyMouseEnter}
           onMouseLeave={handleBeautyMouseLeave}
           id="beauty-category-container"
-          className="h-[5vh] w-[5vw] flex-1"
+          className="h-[5vh] w-[5vw] flex-1 p-2"
         >
           <h2
             id="beauty-category"
-            className="hover:border-b-4 hover:border-green-500 w-fit hover:cursor-pointer "
+            className="hover:border-b-4 hover:border-green-500 w-fit hover:cursor-pointer hover:text-gray-600 "
           >
             BEAUTY
           </h2>
@@ -106,7 +106,7 @@ export default function Header({ isActive, setIsActive, quantity }) {
         </div>
       </div>
 
-      <div id="Search-bar-container" className="mt-10 w-[35%] h-[40%] flex ">
+      <div id="Search-bar-container" className="mt-10 w-[30%] h-[40%] flex ml-6">
         <input
           type="search"
           name="product-search-bar"
@@ -118,17 +118,17 @@ export default function Header({ isActive, setIsActive, quantity }) {
 
       <div
         id="routes-container"
-        className=" flex flex-rows text-[1.4em] w-[25%] h-[50%] font-poppins font-bold mt-10 ml-8 text-stone-500"
+        className=" flex flex-rows text-[1.1em] w-[20%] h-[40%] font-poppins font-bold mt-10 ml-8 text-stone-400 "
       >
-        <Link className=" flex-1 hover:text-gray-300 p-2 ml-8 " to="/content/home">
+        <Link className=" flex-1 hover:text-gray-600 p-2 ml-8 " to="/content/home">
           HOME
         </Link>
-        <Link className=" flex-1 hover:text-gray-300 p-2" to="/content/products">
+        <Link className=" flex-1 hover:text-gray-600 p-2" to="/content/products">
           PRODUCT
         </Link>
-        <Link className=" flex flex-1 hover:text-gray-300 p-2 ml-2" to="/content/cart">
+        <Link className=" flex flex-1 hover:text-gray-600 p-2 ml-2" to="/content/cart">
           CART
-          <RiShoppingBag4Line className="h-[18px] mt-2 " />
+          <RiShoppingBag4Line className="h-[18px] mt-1 " />
           <span
             className={`h-[50%] flex-1 mr-2 ${quantity > 0 ? "block" : "hidden"}`}
           >

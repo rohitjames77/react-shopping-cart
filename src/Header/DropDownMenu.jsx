@@ -4,7 +4,7 @@ export function DropDownMenuMen({ isActive }) {
       id="menDropDownContainer"
       className={`relative flex flex-cols mt-[17%] mr-[25%] h-[30vh] w-[60vw] ${isActive.men === true ? "block" : "hidden"} `}
     >
-      <div className="bg-stone-200  flex-1 p-2">
+      <div className="bg-stone-200 flex-1 p-2">
         <ul
           id="indianwear-heading "
           className=" flex flex-col flex-1 gap-2 font-poppins font-bold text-red-400 text-xl  "
@@ -71,7 +71,7 @@ export function DropDownMenuMen({ isActive }) {
           id="indian-festive-wear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-red-400 text-xl hover:cursor-pointer"
         >
-          Festive Wears
+          Festive Wear
           <li
             id="indianwear-kurta&set"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
@@ -141,7 +141,7 @@ export function DropDownMenuMen({ isActive }) {
           id="innerwear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-red-400 text-xl hover:cursor-pointer"
         >
-          Inner Wears
+          Inner Wear
           <li
             id="innerwear-briefs"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
@@ -164,7 +164,7 @@ export function DropDownMenuMen({ isActive }) {
             id="innerwear-sleepwear"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            SleepWears
+            SleepWear
           </li>
           <li
             id="innerwear-thermals"
@@ -179,7 +179,7 @@ export function DropDownMenuMen({ isActive }) {
           id="footwear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-red-400 text-xl hover:cursor-pointer"
         >
-          Foot Wears
+          Foot Wear
           <li
             id="footwear-casual"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
@@ -230,40 +230,40 @@ export function DropDownMenuMen({ isActive }) {
           id="sportswear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-red-400 text-xl hover:cursor-pointer"
         >
-          Sport Wears
+          Sport Wear
           <li
-            id="sportswears-active-tshirts"
+            id="sportswear-active-tshirts"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
             Active T-Shirts
           </li>
           <li
-            id="sportswears-tracks-shorts"
+            id="sportswear-tracks-shorts"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
             Track pants & Shorts
           </li>
           <li
-            id="sportswears-tracksuits"
+            id="sportswear-tracksuits"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           ></li>
           <li
-            id="sportswears-jackets"
+            id="sportswear-jackets"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
             Jackets SweatShirts
           </li>
           <li
-            id="sportswears-accesories"
+            id="sportswear-accesories"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
             Sports Accessories
           </li>
           <li
-            id="sportswears-swimwear"
+            id="sportswear-swimwear"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Swim Wears
+            Swim Wear
           </li>
         </ul>
       </div>
@@ -338,7 +338,7 @@ export function DropDownWomen({ isActive }) {
           id="indian-festive-wear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl hover:cursor-pointer"
         >
-          Western Wears
+          Western Wear
           <li
             id="western-dresses"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
@@ -384,22 +384,22 @@ export function DropDownWomen({ isActive }) {
             Briefs
           </li>
           <li
-            id="lingerie-Shapewears"
+            id="lingerie-Shapewear"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Shapewears
+            Shapewear
           </li>
           <li
             id="lingerie-sleepwear"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Sleepwears
+            Sleepwear
           </li>
           <li
             id="lingerie-swimwear"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Swimwears
+            Swimwear
           </li>
         </ul>
       </div>
@@ -435,7 +435,7 @@ export function DropDownWomen({ isActive }) {
           id="footwear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl hover:cursor-pointer"
         >
-          Foot Wears
+          Foot Wear
           <li
             id="footwear-flats"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
@@ -486,40 +486,40 @@ export function DropDownWomen({ isActive }) {
           id="sportswear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl hover:cursor-pointer"
         >
-          Sport Wears
+          Sport Wear
           <li
-            id="sportswears-active-tshirts"
+            id="sportswear-active-tshirts"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
             Active T-shirts
           </li>
           <li
-            id="sportswears-tracks-shorts"
+            id="sportswear-tracks-shorts"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
             Track pants & Shorts
           </li>
           <li
-            id="sportswears-tracksuits"
+            id="sportswear-tracksuits"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           ></li>
           <li
-            id="sportswears-jackets"
+            id="sportswear-jackets"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
             Jackets Sweatshirts
           </li>
           <li
-            id="sportswears-accesories"
+            id="sportswear-accesories"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
             Sports Accessories
           </li>
           <li
-            id="sportswears-swimwear"
+            id="sportswear-swimwear"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Swim Wears
+            Swim Wear
           </li>
         </ul>
       </div>
