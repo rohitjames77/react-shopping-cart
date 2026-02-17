@@ -2,7 +2,6 @@ import React from "react";
 import Header from "./Header/Header";
 import { useState } from "react";
 import { Outlet } from "react-router";
-import Carousel from "./Content/Carousel";
 
 function App() {
   const [isActive, setIsActive] = useState({
