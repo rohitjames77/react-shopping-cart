@@ -10,7 +10,7 @@ function CartInventories({
   return (
     <div
       id="cart-inventories-container"
-      className="row-start-1 row-end-8 col-start-1 col-end-5 bg-white h-[100%] w-[80%] ml-10 mt-10"
+      className="row-start-1 row-end-8 col-start-1 col-end-5 bg-white h-[100%] overflow-y-auto w-[80%] ml-10 mt-10"
     >
       <div className="border-b-2 border-gray-300 w-[90%] ml-8 mt-4">
         <h1 className="font-bold font-poppins text-4xl p-2">Shopping Bag</h1>
@@ -22,7 +22,7 @@ function CartInventories({
       </div>
       <div
         id="selected-product-card-container"
-        className="flex flex-cols flex-wrap flex-1 w-[90%] ml-8 overflow-y-auto "
+        className="flex flex-cols flex-wrap flex-1 w-[90%] ml-8"
       >
         {selectedProductArr.length === 0 ? (
           <span className="text-bold text-2xl mt-8 ml-8 text-center justify-center text-red-500">
