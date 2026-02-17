@@ -9,7 +9,7 @@ export function DropDownMenuMen({ isActive }) {
           id="indianwear-heading "
           className=" flex flex-col flex-1 gap-2 font-poppins font-bold text-red-400 text-xl  "
         >
-          Indianwear
+          Indian Wear
           <li
             id="indianwear-t-shirt"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
@@ -141,7 +141,7 @@ export function DropDownMenuMen({ isActive }) {
           id="innerwear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-red-400 text-xl hover:cursor-pointer"
         >
-          Innerwears
+          Inner Wears
           <li
             id="innerwear-briefs"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
@@ -179,7 +179,7 @@ export function DropDownMenuMen({ isActive }) {
           id="footwear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-red-400 text-xl hover:cursor-pointer"
         >
-          Footwears
+          Foot Wears
           <li
             id="footwear-casual"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
@@ -230,7 +230,7 @@ export function DropDownMenuMen({ isActive }) {
           id="sportswear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-red-400 text-xl hover:cursor-pointer"
         >
-          SportWears
+          Sport Wears
           <li
             id="sportswears-active-tshirts"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
@@ -299,7 +299,7 @@ export function DropDownWomen({ isActive }) {
             id="indianwear-ethnicwear"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-            Ethnicwear
+            Ethnic Wear
           </li>
           <li
             id="indianwear-leggings-salwar"
@@ -338,7 +338,7 @@ export function DropDownWomen({ isActive }) {
           id="indian-festive-wear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl hover:cursor-pointer"
         >
-          Westernwears
+          Western Wears
           <li
             id="western-dresses"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
@@ -435,7 +435,7 @@ export function DropDownWomen({ isActive }) {
           id="footwear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl hover:cursor-pointer"
         >
-          Footwears
+          Foot Wears
           <li
             id="footwear-flats"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
@@ -486,7 +486,7 @@ export function DropDownWomen({ isActive }) {
           id="sportswear"
           className="flex flex-col flex-1 gap-2 font-poppins font-bold text-fuchsia-500 text-xl hover:cursor-pointer"
         >
-          SportWears
+          Sport Wears
           <li
             id="sportswears-active-tshirts"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"

@@ -112,31 +112,31 @@ export default function Header({ isActive, setIsActive, quantity }) {
           name="product-search-bar"
           id="product-search-bar"
           placeholder="Search"
-          className="flex-1 bg-gray-200 rounded-xl focus:outline-none "
+          className="flex-1 bg-gray-200 rounded-xl focus:outline-none p-2 "
         />
       </div>
 
       <div
         id="routes-container"
-        className=" flex flex-rows text-[1.4em] w-[30%] h-[50%] font-poppins font-bold mt-10 ml-8 text-stone-500"
+        className=" flex flex-rows text-[1.4em] w-[25%] h-[50%] font-poppins font-bold mt-10 ml-8 text-stone-500"
       >
-        <Link className=" flex-1 hover:text-gray-300 " to="/content/home">
-          Home
+        <Link className=" flex-1 hover:text-gray-300 p-2 ml-8 " to="/content/home">
+          HOME
         </Link>
-        <Link className="  flex-1 hover:text-gray-300" to="/content/products">
-          Product
+        <Link className=" flex-1 hover:text-gray-300 p-2" to="/content/products">
+          PRODUCT
         </Link>
-        <Link className=" flex flex-1 hover:text-gray-300" to="/content/cart">
-          Cart
-          <RiShoppingBag4Line className="h-[18px] mt-2" />
+        <Link className=" flex flex-1 hover:text-gray-300 p-2 ml-2" to="/content/cart">
+          CART
+          <RiShoppingBag4Line className="h-[18px] mt-2 " />
           <span
             className={`h-[50%] flex-1 mr-2 ${quantity > 0 ? "block" : "hidden"}`}
           >
             <div
               id="cart-items-quantity"
-              className="bg-red-400 rounded-full h-[100%] w-[20px] h-[20px] text-white flex items-center justify-center"
+              className="bg-red-400 rounded-full w-[20px] h-[20px] p-2 text-white flex items-center justify-center"
             >
-              <p>{quantity}</p>
+              <p className="text-xs">{quantity}</p>
             </div>
           </span>
         </Link>
