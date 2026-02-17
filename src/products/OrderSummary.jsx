@@ -38,16 +38,16 @@ function OrderSummary({ selectedProductArr, setPaymentProceeded, setTotal }) {
           id="cart-quantity-heading-container"
           className="grid grid-rows-1 grid-cols-6"
         >
-          <AiOutlineShoppingCart className=" row-start-1 col-start-1 h-1/2 justify-self-end place-self-center" />
+          <AiOutlineShoppingCart className=" row-start-1 col-start-1 h-1/2 justify-self-end place-self-center mr-8" />
           <span
             id="item-quantity-heading"
-            className=" row-start-1 col-start-2 col-end-5 text-lg"
+            className=" row-start-1 col-start-1 col-end-5 text-lg ml-10"
           >
             Item(s) in a cart
           </span>
           <span
             id="details-title"
-            className="font-poppins text-xl text-blue-500 font-bold row-start-1 col-start-5"
+            className="font-poppins text-xl text-blue-500 font-bold row-start-1 col-start-5 mr-2"
           >
             Details
           </span>
@@ -61,7 +61,7 @@ function OrderSummary({ selectedProductArr, setPaymentProceeded, setTotal }) {
           </label>
           <span
             id="sub-total-quantity"
-            className="row-start-1 text-red-500 col-start-3"
+            className="row-start-1 text-red-500 col-start-3 ml-4"
           >
             $ {Math.round(orderTotal)}.00
           </span>
@@ -70,9 +70,9 @@ function OrderSummary({ selectedProductArr, setPaymentProceeded, setTotal }) {
           </span>
           <span
             id="discount-quantity"
-            className="row-start-2 col-start-3 text-green-500"
+            className="row-start-2 col-start-3 text-green-500 ml-4"
           >
-            $ {orderTotal > 0 ? "$ 5 %" : "0"}
+             {orderTotal > 0 ? "$ 5 %" : "0"}
           </span>
           <span
             id="net-subtotal-heading"
@@ -82,16 +82,16 @@ function OrderSummary({ selectedProductArr, setPaymentProceeded, setTotal }) {
           </span>
           <span
             id="net-subtotal-quantity"
-            className="row-start-3 col-start-3 text-red-500"
+            className="row-start-3 col-start-3 text-red-500 ml-4"
           >
-            ${netOrderTotal}.00
+            $ {netOrderTotal}.00
           </span>
           <span id="shipping-heading" className="row-start-4 col-start-1">
             Shipping
           </span>
           <span
             id="shipping-price"
-            className="row-start-4 col-start-3 text-red-500"
+            className="row-start-4 col-start-3 text-red-500 ml-4"
           >
             $ {orderTotal > 0 ? "25.00" : "00.00"}
           </span>
@@ -99,17 +99,17 @@ function OrderSummary({ selectedProductArr, setPaymentProceeded, setTotal }) {
       </div>
       <div
         id="total-saving-container"
-        className="grid grid-rows-1 grid-cols-3  "
+        className="grid grid-rows-1 grid-cols-3 border-b-4 w-[90%] ml-4  "
       >
         <span
           id="grand-total-heading"
-          className="row-start-1 col-start-2 justify-self-start text-xl font-bold "
+          className="row-start-1 col-start-1 ml-2 mb-2 justify-self-start text-xl font-bold "
         >
           Grand Total
         </span>
         <span
           id="grand-total"
-          className="row-start-1 col-start-3 justify-self-start text-lg text-red-600 font-bold  "
+          className="row-start-1 col-start-3 mb-2 justify-self-start text-lg text-red-600 font-bold  "
         >
           $ {orderTotal > 0 ? grossTotal : "00.00"}.00
         </span>
@@ -118,7 +118,7 @@ function OrderSummary({ selectedProductArr, setPaymentProceeded, setTotal }) {
       <button
         type="button"
         onClick={handleProceedToPayment}
-        className=" flex text-center font-bold justify-center text-white bg-blue-500 rounded-xl h-[10%] w-full mt-4 text-2xl active:bg-white active:text-blue-500 active:translate-y-[4px] "
+        className="relative top-[30%] flex text-center font-bold justify-center text-white bg-blue-500 rounded-xl h-[10%] w-full text-xl active:bg-white active:text-blue-500 active:translate-y-[4px] p-2 "
         id="proceed-payment"
       >
         Proceed to Payment
