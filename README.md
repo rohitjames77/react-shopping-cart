@@ -4,9 +4,7 @@ A mock e-commerce application built with React that demonstrates routing, state 
 
 ## 🎥 Live Demo
 
-
 https://github.com/user-attachments/assets/2a81cd79-180b-4cae-a59a-2fd58eb2c422
-
 
 **Live Site:** [[react-shopping-cart](https://react-shopping-cart-three-weld.vercel.app/)]
 
@@ -90,10 +88,13 @@ npm test
 # Build for production
 npm run build
 ```
+
 ---
 
 ### Shop Page
+
 This is where most of the functionality lives. Each product is displayed as a card with:
+
 - Product image and title
 - Price information
 - Quantity controls (buttons and manual input)
@@ -102,7 +103,9 @@ This is where most of the functionality lives. Each product is displayed as a ca
 I fetch the products from the FakeStore API when the page loads, which gave me good practice with useEffect and async operations.
 
 ### Cart Page
+
 Users can review their selections here. I implemented:
+
 - List of all cart items with quantities
 - Ability to increase/decrease quantities
 - Remove items completely
@@ -137,6 +140,7 @@ I tested the application using React Testing Library, focusing on:
 - Cart state updates when items are added/removed
 - Quantity adjustments are working correctly
 - Navigation between pages
+
 ---
 
 ## What I Learned
@@ -171,7 +175,7 @@ Each hosting service handles SPAs differently. Understanding why these configura
 ---
 
 ## Backend Development (In Progress)
-  
+
 **I'm planning to move beyond the FakeStore API and build a proper backend for this application using Ruby on Rails**
 
 **Database:** Setting up PostgreSQL to store products, user data, and order history.

@@ -16,7 +16,6 @@ function CartInventories({
         <h1 className="font-bold font-poppins text-4xl p-2">Shopping Bag</h1>
       </div>
       <div id="cart-items-container" className="flex ml-10 mt-4">
-  
         <span className="flex-2 font-poppins">Product</span>
         <span className=" flex-1 font-poppins">Quantity</span>
         <span className="flex-1 font-poppins ">Price</span>
@@ -25,54 +24,60 @@ function CartInventories({
         id="selected-product-card-container"
         className="flex flex-cols flex-wrap flex-1 w-[90%] ml-8 overflow-y-auto "
       >
-        {selectedProductArr.length===0?<span className="text-bold text-2xl mt-8 ml-8 text-center justify-center text-red-500">Your shopping bag is empty...</span>:selectedProductArr.map((index) => (
-          <div
-            id="selected-product"
-            className="border-2 border-gray-300 rounded-xl w-[100%] h-[20%] mt-2 flex "
-            key={index.id}
-          >
+        {selectedProductArr.length === 0 ? (
+          <span className="text-bold text-2xl mt-8 ml-8 text-center justify-center text-red-500">
+            Your shopping bag is empty...
+          </span>
+        ) : (
+          selectedProductArr.map((index) => (
             <div
-              id="product-description"
-              className="flex-2 flex flex-wrap items-center"
+              id="selected-product"
+              className="border-2 border-gray-300 rounded-xl w-[100%] h-[20%] mt-2 flex "
+              key={index.id}
             >
               <div
-                id="img-container"
-                className="bg-gray-200 flex flex-wrap flex-1 w-28 h-28"
+                id="product-description"
+                className="flex-2 flex flex-wrap items-center"
               >
-                <img
-                  src={index.image}
-                  alt="selectedProductImg"
-                  className="h-[80%] w-[80%] bg-white rounded-xl relative top-[10%] left-[10%]"
-                  id="selected-product-Img"
-                />
-              </div>
-              <div
-                id="span-container"
-                className="flex flex-wrap flex-col flex-2 h-[100%] w-[100%]"
-              >
-                <span
-                  className="flex-1 text-sm text-center h-[50%] w-[100%]"
-                  id="selected-product-title"
+                <div
+                  id="img-container"
+                  className="bg-gray-200 flex flex-wrap flex-1 w-28 h-28"
                 >
-                  {index.title}
-                </span>
-                <span
-                  className="flex-1 text-xs text-center h-[50%] w-[100%]"
-                  id="selected-product-rating"
+                  <img
+                    src={index.image}
+                    alt="selectedProductImg"
+                    className="h-[80%] w-[80%] bg-white rounded-xl relative top-[10%] left-[10%]"
+                    id="selected-product-Img"
+                  />
+                </div>
+                <div
+                  id="span-container"
+                  className="flex flex-wrap flex-col flex-2 h-[100%] w-[100%]"
                 >
-                  Ratings:{index.rating}
-                </span>
+                  <span
+                    className="flex-1 text-sm text-center h-[50%] w-[100%]"
+                    id="selected-product-title"
+                  >
+                    {index.title}
+                  </span>
+                  <span
+                    className="flex-1 text-xs text-center h-[50%] w-[100%]"
+                    id="selected-product-rating"
+                  >
+                    Ratings:{index.rating}
+                  </span>
+                </div>
               </div>
-            </div>
 
-            <QuantitySelector
-              selectedProductArr={selectedProductArr}
-              setQuantity={setQuantity}
-              setSelectedProductArr={setSelectedProductArr}
-              index={index}
-            />
-          </div>
-        ))}
+              <QuantitySelector
+                selectedProductArr={selectedProductArr}
+                setQuantity={setQuantity}
+                setSelectedProductArr={setSelectedProductArr}
+                index={index}
+              />
+            </div>
+          ))
+        )}
       </div>
     </div>
   );

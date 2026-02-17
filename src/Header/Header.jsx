@@ -1,11 +1,7 @@
 import logo from "../assets/hypecart-logo2.svg";
 import { RiShoppingBag4Line } from "react-icons/ri";
 import { Link } from "react-router";
-import {
-  DropDownMenuMen,
-  DropDownWomen,
-  DropDownBeauty,
-} from "./DropDownMenu";
+import { DropDownMenuMen, DropDownWomen, DropDownBeauty } from "./DropDownMenu";
 
 export default function Header({ isActive, setIsActive, quantity }) {
   const handleMenMouseEnter = () => {

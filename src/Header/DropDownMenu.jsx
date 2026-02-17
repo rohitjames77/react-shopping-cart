@@ -1,4 +1,3 @@
-
 export function DropDownMenuMen({ isActive }) {
   return (
     <div
@@ -288,9 +287,8 @@ export function DropDownWomen({ isActive }) {
             id="indianwear-suits"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"
           >
-           Suits
+            Suits
           </li>
-      
           <li
             id="indianwear-sarees"
             className="font-poppins text-stone-500 hover:text-stone-800 hover:text-bold text-sm hover:cursor-pointer"

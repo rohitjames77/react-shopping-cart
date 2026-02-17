@@ -1,8 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { describe, vi,test, expect } from "vitest";
+import { describe, vi, test, expect } from "vitest";
 import Carousel from "./Carousel";
- 
 
 vi.mock("react-router", () => ({
   useOutletContext: () => ({

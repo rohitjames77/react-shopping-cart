@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { IoBagCheckOutline } from "react-icons/io5";
 import { useOutletContext } from "react-router";
@@ -434,7 +433,6 @@ function SortDropdown() {
 
   return (
     <div className="relative row-start-14 row-end-20 col-start-18 col-end-21 ">
- 
       <div
         onClick={() => setIsOpen(!isOpen)}
         className="border-2 border-gray-300 rounded-lg flex justify-between items-center p-2 cursor-pointer active:bg-gray-500 active:text-white"
@@ -449,7 +447,6 @@ function SortDropdown() {
           <MdOutlineKeyboardDoubleArrowDown className="ml-2" />
         )}
       </div>
-
 
       {isOpen && (
         <div className="absolute mt-2 w-full rounded-lg border border-gray-300 bg-white z-10">

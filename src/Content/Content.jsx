@@ -20,7 +20,6 @@ function ContentPage() {
         const result = await response.json();
         setStoreApiData(result);
         console.log(storeApiData);
-        
       } catch (err) {
         setError(err.message);
       } finally {
@@ -51,7 +50,6 @@ function ContentPage() {
       id="content-page"
       className={` ml-10 w-[90%] h-[200%] overflow-y-auto bg-gray-50`}
     >
-      
       <Outlet
         context={{
           storeApiData,

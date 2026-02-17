@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-function OrderSummary({ selectedProductArr, setPaymentProceeded,setTotal }) {
+function OrderSummary({ selectedProductArr, setPaymentProceeded, setTotal }) {
   const orderTotal = selectedProductArr.reduce(
     (total, item) => total + item.price * item.quantity,
     0,
@@ -10,9 +10,8 @@ function OrderSummary({ selectedProductArr, setPaymentProceeded,setTotal }) {
   const grossTotal = netOrderTotal + 25;
 
   const handleProceedToPayment = () => {
-    setTotal(grossTotal)
+    setTotal(grossTotal);
     setPaymentProceeded(true);
-   
   };
 
   return (
@@ -74,7 +73,6 @@ function OrderSummary({ selectedProductArr, setPaymentProceeded,setTotal }) {
             className="row-start-2 col-start-3 text-green-500"
           >
             $ {orderTotal > 0 ? "$ 5 %" : "0"}
-            
           </span>
           <span
             id="net-subtotal-heading"

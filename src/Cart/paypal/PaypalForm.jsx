@@ -2,15 +2,14 @@ import React from "react";
 function PaypalForm({ setLogInSuccess, isPaypalSelected }) {
   const handleBtnOnClick = () => {
     setLogInSuccess(true);
-setTimeout(()=>{
-setLogInSuccess(false)
-},3000)
-
+    setTimeout(() => {
+      setLogInSuccess(false);
+    }, 3000);
   };
   return (
     <div
       id="card-payment-paypal-form-container"
-      className={` shadow-xl row-start-6 row-end-15 col-start-1 col-end-11 grid grid-rows-15 grid-cols-15 p-2 ${isPaypalSelected?"block":"hidden"}`}
+      className={` shadow-xl row-start-6 row-end-15 col-start-1 col-end-11 grid grid-rows-15 grid-cols-15 p-2 ${isPaypalSelected ? "block" : "hidden"}`}
     >
       <label
         htmlFor="user-email-id"

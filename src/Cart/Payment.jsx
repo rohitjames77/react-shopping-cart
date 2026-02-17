@@ -11,7 +11,7 @@ function Payment({
   setIsVisaSelected,
   setIsPaypalSelected,
   setLogInSuccess,
-  setPaymentSuccess
+  setPaymentSuccess,
 }) {
   const handleVisaclick = () => {
     setIsVisaSelected(true);
@@ -25,10 +25,10 @@ function Payment({
   const handlePaymentSuccess = () => {
     setPaymentSuccess(true);
 
-    setTimeout(()=>{
-setPaymentSuccess(false)
-    },3000)
-  }
+    setTimeout(() => {
+      setPaymentSuccess(false);
+    }, 3000);
+  };
 
   return (
     <div
@@ -78,7 +78,10 @@ setPaymentSuccess(false)
               className="flex-1 h-full w-full"
             />
           </div>
-          <VisaForm isVisaSelected={isVisaSelected}  setPaymentSuccess={setPaymentSuccess}/>
+          <VisaForm
+            isVisaSelected={isVisaSelected}
+            setPaymentSuccess={setPaymentSuccess}
+          />
 
           <PaypalForm
             setLogInSuccess={setLogInSuccess}
@@ -91,7 +94,7 @@ setPaymentSuccess(false)
             id="payment-confirmation-button"
             className="row-start-16 col-start-6 h-[5vh] w-[22vw] bg-blue-500 text-white font-bold font-poppins rounded-lg p-2 active:translate-y-[4px] active:shadow-lg active:bg-blue-800"
             onClick={handlePaymentSuccess}
-         >
+          >
             Pay
           </button>
         </form>

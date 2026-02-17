@@ -1,13 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import ErrorPage from "./ErrorPage";
-import { describe,test,expect,beforeEach,vi} from "vitest";
-
+import { describe, test, expect, beforeEach, vi } from "vitest";
 
 describe("ErrorPage basic tests", () => {
   beforeEach(() => {
-  vi.restoreAllMocks();
-});
+    vi.restoreAllMocks();
+  });
 
   test("renders error title and static content", () => {
     render(<ErrorPage error="Something went wrong" />);
@@ -15,7 +14,9 @@ describe("ErrorPage basic tests", () => {
     expect(screen.getByText("Status Code 400")).toBeInTheDocument();
     expect(screen.getByText("Something went wrong")).toBeInTheDocument();
     expect(screen.getByText("Bad Request")).toBeInTheDocument();
-    expect(screen.getByText(/sorry for the inconvenience/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/sorry for the inconvenience/i),
+    ).toBeInTheDocument();
   });
 
   test("calls window.location.reload when clicking Try Again", async () => {

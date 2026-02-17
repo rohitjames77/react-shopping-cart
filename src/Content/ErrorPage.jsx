@@ -4,10 +4,10 @@ import { FaHome } from "react-icons/fa";
 import { LuRefreshCw } from "react-icons/lu";
 
 export default function ErrorPage({ error }) {
-const errorCode = 'Status Code 400'
-const message = 'Bad Request';
-const title = error;
-    
+  const errorCode = "Status Code 400";
+  const message = "Bad Request";
+  const title = error;
+
   const handleRetry = () => {
     window.location.reload();
   };
