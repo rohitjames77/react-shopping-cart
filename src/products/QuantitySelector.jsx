@@ -1,53 +1,37 @@
 import React from "react";
-import { useState } from "react";
 import Price from "./Price";
-import OrderSummary from "./OrderSummary";
 
 function QuantitySelector({
   index,
   setSelectedProductArr,
   selectedProductArr,
-  setQuantity,
 }) {
-  const [individualQuantity, setIndividualQuantity] = useState(1);
-  console.log(individualQuantity);
-  const handleQuantityIncrease = () => {
-    if (individualQuantity > 0) {
-      setSelectedProductArr((prev) =>
-        prev.map((item) =>
-          item.id === index.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item,
-        ),
-      );
-    }
+  const currentProduct = selectedProductArr.find(
+    (item) => item.id === index.id
+  );
+
+  const quantity = currentProduct.quantity;
+
+  const increaseQuantity = () => {
+    setSelectedProductArr((prev) =>
+      prev.map((item) =>
+        item.id === index.id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      )
+    );
   };
 
-  const handleQuantityDecrease = () => {
-    if (individualQuantity > 0) {
-      setSelectedProductArr((prev) =>
-        prev.map((item) =>
+  const decreaseQuantity = () => {
+    setSelectedProductArr((prev) =>
+      prev
+        .map((item) =>
           item.id === index.id
             ? { ...item, quantity: item.quantity - 1 }
-            : item,
-        ),
-      );
-    }
-  };
-
-  const handleNegQuantityClick = () => {
-    if (individualQuantity > 0) {
-      setIndividualQuantity((prev) => (prev -= 1));
-      handleQuantityDecrease();
-    }
-  };
-
-  const handlePosQuantityClick = () => {
-    if (individualQuantity <= 4) {
-      setIndividualQuantity((prev) => (prev += 1));
-      handleQuantityIncrease();
-      console.log(selectedProductArr);
-    }
+            : item
+        )
+        .filter((item) => item.quantity > 0) // remove if 0
+    );
   };
 
   return (
@@ -58,23 +42,23 @@ function QuantitySelector({
       >
         <span
           id="negative-quantity-selector"
-          onClick={handleNegQuantityClick}
+          onClick={decreaseQuantity}
           className=" flex-1 text-center text-lg"
         >
           -
         </span>
         <span id="quantity" className="flex-1 text-center text-xl">
-          {individualQuantity}{" "}
+          {quantity}
         </span>
         <span
           id="positive-quantity"
-          onClick={handlePosQuantityClick}
+          onClick={increaseQuantity}
           className="text-center flex-1 text-lg"
         >
           +
         </span>
       </div>
-      <Price index={index} individualQuantity={individualQuantity} />
+      <Price index={index} quantity={quantity}  />
     </div>
   );
 }

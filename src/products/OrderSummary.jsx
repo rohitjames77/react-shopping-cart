@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-function OrderSummary({ selectedProductArr, setPaymentProceeded, setTotal }) {
+function OrderSummary({ selectedProductArr, setPaymentProceeded, setTotal, quantity }) {
   const orderTotal = selectedProductArr.reduce(
     (total, item) => total + item.price * item.quantity,
     0,
@@ -21,7 +21,7 @@ function OrderSummary({ selectedProductArr, setPaymentProceeded, setTotal }) {
     >
       <div
         id="summary-header-container"
-        className="border-b-4 w-[90%]  ml-4 p-2 flex flex-col order-1"
+        className="border-b-4 w-[90%] ml-4 p-2 flex flex-col order-1"
       >
         <h1
           id="order-summary-title"

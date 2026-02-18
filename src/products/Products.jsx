@@ -126,7 +126,7 @@ export function ProductSideBar() {
       >
         <div className="flex-1 pt-2 mt-10 ">
           <label
-            For="price-range-selector"
+            htmlFor="price-range-selector"
             className="text-gray-800 font-poppins hover:text-black"
           >
             Price
@@ -350,7 +350,7 @@ function ProductCards({
   setQuantity,
   setSelectedProductArr,
 }) {
-  console.log(storeApiData);
+ const [selectedQuantity,setSelectedQuantity] = useState(1)
 
   const product = {
     id: storeApiData[productNo]?.id,
@@ -361,12 +361,23 @@ function ProductCards({
     quantity: 1,
   };
 
-  const handleOnclick = () => {
-    console.log(product);
-    setSelectedProductArr((prev) => [...prev, product]);
-    setQuantity(quantity + 1);
-  };
+  const handleOnClick = () => {
+  setSelectedProductArr((prev) => {
+    const existing = prev.find((item) => item.id === product.id);
 
+    if (existing) {
+      return prev.map((item) =>
+        item.id === product.id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      );
+    }
+
+    return [...prev, { ...product, quantity: 1 }];
+  });
+  setQuantity(quantity + 1);
+};
+  
   return (
     <div
       id={`product-card-${product.id}`}
@@ -403,7 +414,7 @@ function ProductCards({
         <IoBagCheckOutline className="h-[1.2rem] w-[1.2rem] mt-2 ml-2" />
         <button
           className="justify-center text-lg-bold mr-4"
-          onClick={handleOnclick}
+          onClick={handleOnClick}
         >
           ADD TO BAG
         </button>
