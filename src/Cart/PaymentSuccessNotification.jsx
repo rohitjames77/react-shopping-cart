@@ -4,7 +4,7 @@ export default function PaymentSuccessNotification({
   isPaymentSuccess,
   displayTotal,
 }) {
-  console.log(isPaymentSuccess);
+
 
   if (isPaymentSuccess) {
     return (

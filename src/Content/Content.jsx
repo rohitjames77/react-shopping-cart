@@ -3,9 +3,7 @@ import { useState, useEffect } from "react";
 import { Outlet } from "react-router";
 import { useOutletContext } from "react-router";
 function ContentPage() {
-  const { isActive, quantity, setQuantity } = useOutletContext();
-
-  console.log(isActive);
+  const {  quantity, setQuantity } = useOutletContext();
   const [storeApiData, setStoreApiData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -19,7 +17,6 @@ function ContentPage() {
         const response = await fetch("https://fakestoreapi.com/products");
         const result = await response.json();
         setStoreApiData(result);
-        console.log(storeApiData);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -48,7 +45,12 @@ function ContentPage() {
   return (
     <div
       id="content-page"
-      className={` ml-10 w-[90%] h-[200%] overflow-y-auto bg-gray-50`}
+      className='ml-10 w-[90%] h-[100%] bg-gray-50 overflow-y-auto
+  [&::-webkit-scrollbar]:w-2
+  [&::-webkit-scrollbar-track]:bg-gray-200
+  [&::-webkit-scrollbar-thumb]:bg-gray-400
+  [&::-webkit-scrollbar-thumb]:rounded-full
+  [&::-webkit-scrollbar-thumb]:hover:bg-gray-800'
     >
       <Outlet
         context={{

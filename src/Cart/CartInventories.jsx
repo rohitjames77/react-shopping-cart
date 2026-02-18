@@ -4,8 +4,8 @@ function CartInventories({
   selectedProductArr,
   setQuantity,
   setSelectedProductArr,
+  quantity
 }) {
-  console.log(selectedProductArr[0]?.price);
 
   return (
     <div
@@ -74,6 +74,7 @@ function CartInventories({
                 setQuantity={setQuantity}
                 setSelectedProductArr={setSelectedProductArr}
                 index={index}
+                quantity={quantity}
               />
             </div>
           ))

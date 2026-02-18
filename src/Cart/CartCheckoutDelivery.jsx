@@ -71,6 +71,7 @@ export default function CartCheckoutDelivery() {
           selectedProductArr={selectedProductArr}
           setPaymentProceeded={setPaymentProceeded}
           setTotal={setTotal}
+          quantity={quantity}
         />
       </div>
     </div>
